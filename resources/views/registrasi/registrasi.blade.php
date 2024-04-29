@@ -5,30 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
+
+    {{-- css style start--}}
+    <link rel="stylesheet" href="css/registrasi.css">
+    {{-- css style end --}}
+    
+    {{-- font style start --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    {{-- font style end --}}
+
+    {{-- my icon start --}}
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    {{-- my icon start end --}}
+
 <body>
-    <h1>hallo silahkan isi form</h1>
-    <form action="/register" method="post">
-    @csrf
-    <div class="from-regist">
-    <label for="nim">NIM</label>
-    <input type="text" name="nim" id="nim" placeholder="Masukan NIM" required autofocus>
+    <div class="wrapper">
+        <form action="/register" method="post">
+            @csrf
+            <h1>Registrasi</h1>
+            <div class="input-box">
+                <input type="text" placeholder="NIM" name="nim" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Nama" name="nama" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Jabatan" name="jabatan" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" name="password" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <button type="submit" class="btn">Daftar</button>
+        </form>
     </div>
-    <div class="from-regist">
-    <label for="nama">Nama</label>
-    <input type="text" name="nama" id="nama" placeholder="Masukkan Nama" required>
-    </div>
-    <div class="from-regist">
-    <label for="jabatan">Jabatan</label>
-    <input type="text" name="jabatan" id="jabatan" placeholder="Masukkan Jabatan" required>
-    </div>
-    <div class="from-regist">
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" placeholder="Masukkan Password" required>
-    </div>
-    <div class="from-regist">
-    <button type="submit">Submit</button>
-    </div>
-    </form>
 </body>
 </html>
