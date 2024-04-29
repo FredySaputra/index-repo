@@ -23,12 +23,12 @@
         <form action="/login" method="post">
             @csrf
             <div class="input-box">
-                <input type="text" name="username" @error ('username') is-invalid @enderror id="username" placeholder="Username" autofocus required value="{{old('username')}}">
+                <input type="text" name="nim" @error ('username') is-invalid @enderror id="nim" placeholder="NIM" autofocus required value="{{old('nim')}}">
                 <i class='bx bxs-user'></i>
-                <label for="username">Username</label>
+                <label for="nim">Username</label>
             </div>
             <div class="input-box">
-                <input type="Password" placeholder="Password" required>
+                <input type="password" name="password" placeholder="password" required>
                 <i class='bx bxs-lock-alt'></i>
                 <label for="password">Password</label>
             </div>
@@ -36,7 +36,7 @@
 
             <div class="register-link">
                 <p>
-                    Belum punya akun? <a href="registrasi">Register</a>
+                    Belum punya akun? <a href="/register">Daftar</a>
                 </p>
             </div>
         </form>
